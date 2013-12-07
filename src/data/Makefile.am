@@ -8,9 +8,9 @@ SUBSTFILES = $(CONFFILES)
 CLEANFILES = $(SUBSTFILES)
 
 nobase_dist_files_DATA = \
-	404.html \
 	nginx/mime.types \
 	$(CONFFILES) \
+	static/404.html \
 	static/apple-touch-icon-precomposed.png \
 	static/crossdomain.xml \
 	static/css/main.css \

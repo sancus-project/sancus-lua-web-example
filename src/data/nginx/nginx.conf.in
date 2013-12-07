@@ -6,6 +6,8 @@ add_header "X-UA-Compatible" "IE=Edge,chrome=1";
 root @pkgdatadir@/static;
 include @pkgdatadir@/nginx/mime.types;
 
+error_page 404 /404.html;
+
 gzip on;
 gzip_disable "MSIE [1-6]\.(?!.*SV1)";
 gzip_types application/x-javascript application/json text/css image/png;
