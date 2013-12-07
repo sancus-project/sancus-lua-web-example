@@ -13,8 +13,10 @@ filesdir = \$(pkgdatadir)
 CONFFILES = \\
 	$(list $CONFFILES)
 
-SUBSTFILES = \$(CONFFILES)
+SUBSTFILES = run \$(CONFFILES)
 CLEANFILES = \$(SUBSTFILES)
+
+dist_files_SCRIPTS = run
 
 nobase_dist_files_DATA = \\
 	$(list $EXTRAFILES) \\
@@ -31,6 +33,7 @@ do_subst = sed \\
 	\$(do_subst) < \$< > \$@~
 	mv \$@~ \$@
 
+run: run.sh.in
 EOT
 for x in $CONFFILES; do
 	echo "$x: $x.in"

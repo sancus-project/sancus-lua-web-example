@@ -4,8 +4,10 @@ CONFFILES = \
 	nginx/nginx.conf \
 	nginx/nginx-server.conf
 
-SUBSTFILES = $(CONFFILES)
+SUBSTFILES = run $(CONFFILES)
 CLEANFILES = $(SUBSTFILES)
+
+dist_files_SCRIPTS = run
 
 nobase_dist_files_DATA = \
 	nginx/mime.types \
@@ -35,5 +37,6 @@ $(SUBSTFILES):
 	$(do_subst) < $< > $@~
 	mv $@~ $@
 
+run: run.sh.in
 nginx/nginx.conf: nginx/nginx.conf.in
 nginx/nginx-server.conf: nginx/nginx-server.conf.in
