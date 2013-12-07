@@ -1,0 +1,14 @@
+#!/bin/sh
+
+list() {
+	if [ $# -eq 0 ]; then
+		cat
+	else
+		echo "$@"
+	fi | tr -s ' ' | tr ' ' '\n' | sort -V | tr '\n' '|' |
+		sed -e 's,|$,,' -e 's,|, \\\n\t,g'
+}
+
+listall() {
+	find "$@" ! -type d | grep -v '\(~\|\.swp\|\.orig\)$' | list
+}
