@@ -11,12 +11,12 @@ nobase_dist_files_DATA = \
 	nginx/mime.types \
 	$(CONFFILES) \
 	static/404.html \
-	static/apple-touch-icon-precomposed.png \
 	static/crossdomain.xml \
 	static/css/main.css \
 	static/css/normalize.css \
-	static/favicon.ico \
 	static/img/.gitignore \
+	static/img/apple-touch-icon-precomposed.png \
+	static/img/favicon.png \
 	static/index.html \
 	static/js/main.js \
 	static/js/plugins.js \

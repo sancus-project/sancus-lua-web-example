@@ -17,5 +17,8 @@ gzip_types application/x-javascript application/json text/css image/png;
 location / {
 	expires 1M;
 
+	rewrite ^/favicon.ico$ /img/favicon.png permanent;
+	rewrite ^/apple-touch-icon-precomposed.png$ /img/apple-touch-icon-precomposed.png permanent;
+
 	try_files $uri $uri/index.html $uri.html =404;
 }
