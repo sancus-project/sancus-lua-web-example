@@ -2,6 +2,7 @@ filesdir = $(pkgdatadir)
 
 nobase_dist_files_DATA = \
 	404.html \
+	nginx/mime.types \
 	static/apple-touch-icon-precomposed.png \
 	static/crossdomain.xml \
 	static/css/main.css \
