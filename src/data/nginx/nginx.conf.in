@@ -1,6 +1,8 @@
 access_log @localstatedir@/log/@pkgname@/access.log;
 error_log  @localstatedir@/log/@pkgname@/error.log;
 
+add_header "X-UA-Compatible" "IE=Edge,chrome=1";
+
 root @pkgdatadir@/static;
 include @pkgdatadir@/nginx/mime.types;
 
