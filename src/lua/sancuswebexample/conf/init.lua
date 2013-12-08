@@ -8,6 +8,7 @@ common = require(_NAME .. ".common")
 
 function make_app()
 	local app = resource.MinimalMiddleware(common.urls, common.errors)
+	app = resource.RemoveTrailingSlashMiddleware(app)
 	return app
 end
 
