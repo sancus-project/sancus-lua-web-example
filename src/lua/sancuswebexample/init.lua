@@ -5,6 +5,7 @@ setfenv(1, _M)
 
 -- submodules
 conf = require(_NAME .. ".conf")
+model = require(_NAME .. ".model")
 
 run = conf.make_app()
 
