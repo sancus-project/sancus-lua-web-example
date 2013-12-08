@@ -20,5 +20,13 @@ location / {
 	rewrite ^/favicon.ico$ /img/favicon.png permanent;
 	rewrite ^/apple-touch-icon-precomposed.png$ /img/apple-touch-icon-precomposed.png permanent;
 
-	try_files $uri $uri/index.html $uri.html =404;
+	try_files $uri $uri/index.html @app;
+}
+
+location @app {
+	fastcgi_pass	unix:@localstatedir@/run/@pkgname@.sock;
+	include		fastcgi_params;
+
+	fastcgi_param	SCRIPT_NAME	'';
+	fastcgi_param	PATH_INFO	$uri;
 }
