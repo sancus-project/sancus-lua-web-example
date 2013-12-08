@@ -2,4 +2,7 @@ INSTALL_LMOD = @INSTALL_LMOD@
 
 luadatadir = $(INSTALL_LMOD)
 
-nobase_dist_luadata_DATA =
+nobase_dist_luadata_DATA = \
+	sancuswebexample/conf/common.lua \
+	sancuswebexample/conf/init.lua \
+	sancuswebexample/init.lua
