@@ -6,4 +6,5 @@ nobase_dist_luadata_DATA = \
 	sancuswebexample/conf/common.lua \
 	sancuswebexample/conf/init.lua \
 	sancuswebexample/init.lua \
-	sancuswebexample/model/init.lua
+	sancuswebexample/model/init.lua \
+	sancuswebexample/web/init.lua
