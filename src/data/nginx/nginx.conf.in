@@ -29,4 +29,6 @@ location @app {
 
 	fastcgi_param	SCRIPT_NAME	'';
 	fastcgi_param	PATH_INFO	$uri;
+
+	fastcgi_intercept_errors on;
 }
