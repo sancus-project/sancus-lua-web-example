@@ -4,7 +4,7 @@ cd "$(dirname "$0")"
 
 . ../makefile_gen.in
 
-EXTRAFILES="nginx/mime.types"
+EXTRAFILES="run.lua nginx/mime.types"
 CONFFILES="nginx/nginx.conf nginx/nginx-server.conf"
 
 cat <<EOT > Makefile.am

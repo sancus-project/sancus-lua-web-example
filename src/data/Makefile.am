@@ -9,6 +9,7 @@ CLEANFILES = $(SUBSTFILES)
 
 nobase_dist_files_DATA = \
 	nginx/mime.types \
+	run.lua \
 	$(CONFFILES) \
 	static/404.html \
 	static/crossdomain.xml \
